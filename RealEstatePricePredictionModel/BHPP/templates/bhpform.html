@@ -1,0 +1,65 @@
+{% extends 'bhpbase.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Predicting Home Prices in Bengaluru</h1>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6">
+            <form action="{{'bhppredict'}}">
+                <div class="form-group mt-3">
+                    <label for="area" class="font-weight-bold">Area (Square Feet)</label>
+                    <input type="text" name='area' id='area' class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="bhk" class="font-weight-bold">BHK</label>
+                    <input id="bhk" type="text" name='bhk' min="1" max="5" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="bath" class="font-weight-bold">Bathrooms</label>
+                    <input id="bath" type="text" name='bath' min="1" max="5" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="loc" class="font-weight-bold">Location</label>
+                    <input id="loc" type="text" name='loc' min="1" max="5" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-outline-success btn-block mt-3 font-weight-bold">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- <div class="jumbotron">
+      <h1>
+          Welcome to the Requirement Page for House
+      </h1>
+      <form action="{{url_for('bhppredict')}}">
+          <label for="area">Area (Square Feet)</label>
+          <input type="text" name='area'>
+          <br>
+
+          <label for="bhk">BHK</label>
+          <input type="text" name='bhk' min="1" max="5">
+          <br>
+
+          <label for="bath">BathRooms</label>
+          <input type="text" name='bath' min="1" max="5">
+          <br>
+
+          <label for="loc">Location</label>
+          <input type="text" name='loc'>
+          <br>
+
+          <input type="submit" value="Submit">
+          
+      </form>
+  </div> -->
+{% endblock %}
